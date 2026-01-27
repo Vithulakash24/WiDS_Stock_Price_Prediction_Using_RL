@@ -1,4 +1,5 @@
 ## Midterm Assignment
+- This folder contain implementation of DQN to solve the lunar lander environment
 - Solving the Lunar Lander Env using either DQN or DDQN
 ## Walkthrough
 ### DQN
