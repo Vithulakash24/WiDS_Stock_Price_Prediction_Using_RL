@@ -28,7 +28,7 @@ The project utilizes a custom **Gymnasium** environment designed for multi-asset
 Financial time-series data is non-stationary. To ensure the PPO model learns effectively, a **Rolling Window Normalization** strategy was implemented:
 
 * **The Problem**: Absolute stock prices and indicator ranges (e.g., RSI vs. MACD) vary drastically across different stocks and time periods, leading to unstable training.
-* **The Solution (`rolling_norm`)**: Instead of global scaling, a **50-day lookback window** is used to calculate local means and standard deviations.
+* **The Solution (`rolling_norm`)**: Instead of global scaling, a **50-day lookback window** is used to calculate local means and standard deviations. This prevents data leakage
 * **Transformation**: Each feature $x$ is transformed into a Z-score:
     $$z = \frac{x - \mu_{window}}{\sigma_{window} + \epsilon}$$
     *where $\epsilon = 10^{-10}$ to prevent division by zero.*
@@ -54,5 +54,5 @@ During the final evaluation on unseen data (2018–2019):
 - **Comparison**: The agent significantly outperformed the Buy & Hold benchmark during market downturns, showing a higher Sharpe Ratio and better risk management.
 
 ## Comments
-- **Algorithm Choice**: PPO was selected over A2C and DDPG for its stability and robustness in continuous action spaces.
-- **Realistic Simulation**: The inclusion of transaction costs was critical; without them, the agent developed "noisy" trading habits that failed in realistic backtesting.
+- I tried using various policy gradient methods ,PPO gave the best possible results so I finalized with PPO
+- The hyperparameters were chosen after testing with different parameters
