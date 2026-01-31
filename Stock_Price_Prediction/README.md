@@ -8,9 +8,11 @@ This project implements a custom **Multi-Stock Trading Environment** to train a 
 | :--- | :--- |
 | `nifty_data_2010_2019/` | Raw historical CSV files for Nifty 50 constituent stocks. |
 | `RL_proj_final.ipynb` | Main project notebook: contains environment logic, PPO training, and backtesting. |
-| `processed_data.npy` | Feature-engineered dataset (includes Technical Indicators like MACD, RSI). |
+| `processed_data.npy` | Feature-engineered dataset (includes Technical Indicators like MACD, RSI). Un-normalized |
+| `normed_data.npy` | Feature-engineered dataset (includes Technical Indicators like MACD, RSI). Normalized |
 | `normed_data.npy` | Final input data processed via **50-day rolling normalization**. |
-| `ppo_nifty_model_v1.zip` | Trained weights for the Stable-Baselines3 PPO agent. |
+| `ppo_nifty_model_v1.zip` | Trained weights for the Stable-Baselines3 PPO agent trained using raw data. |
+| `ppo_model`|  Trained weights for the Stable-Baselines3 PPO agent trained using normed data. |
 | `README.md` | Comprehensive project documentation. |
 
 ---
