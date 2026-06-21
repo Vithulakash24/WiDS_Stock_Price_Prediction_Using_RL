@@ -13,6 +13,7 @@ This project implements a custom **Multi-Stock Trading Environment** to train a 
 | `normed_data.npy` | Final input data processed via **50-day rolling normalization**. |
 | `ppo_nifty_model_v1.zip` | Trained weights for the Stable-Baselines3 PPO agent trained using raw data. |
 | `ppo_model`|  Trained weights for the Stable-Baselines3 PPO agent trained using normed data. |
+| `WiDS_Report`| Detailed project documentation and result discussion. |
 | `README.md` | Comprehensive project documentation. |
 
 ---
